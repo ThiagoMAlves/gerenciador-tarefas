@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 
-
 app = FastAPI()
-TAREFAS = [{
+TAREFAS = [
+    {
         "id": "1",
         "titulo": "fazer compras",
         "descrição": "comprar leite e ovos",
@@ -19,7 +19,9 @@ TAREFAS = [{
         "titulo": "lavar roupas",
         "descrição": "estão sujas",
         "estado": "não finalizado",
-    },]
+    },
+]
+
 
 @app.get("/tarefas")
 def listar():
